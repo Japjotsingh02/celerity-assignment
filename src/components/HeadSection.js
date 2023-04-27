@@ -1,6 +1,6 @@
 import React from "react";
 
-const Head_Section = () => {
+const HeadSection = () => {
   return (
     <div>
       <h1 className="mt-24 font-[600] text-[42px] text-center">
@@ -14,4 +14,4 @@ const Head_Section = () => {
   );
 };
 
-export default Head_Section;
+export default HeadSection;
