@@ -1,13 +1,13 @@
 import "./App.css";
-import SearchForm from "./pages/SearchForm";
+import Homepage from "./pages/Homepage";
 import { Routes, Route } from "react-router-dom";
-import Listings from "./pages/Listings";
+import Booking from "./pages/Booking";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<SearchForm />} />
-      <Route path="/listings" element={<Listings />} />
+      <Route path="/" element={<Homepage />} />
+      <Route path="/Booking" element={<Booking />} />
     </Routes>
   );
 }

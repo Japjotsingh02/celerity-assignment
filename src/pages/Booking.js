@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Progressbar from "../components/Progressbar";
 import Summary from "../components/Summary";
 
-const Listings = () => {
+const Booking = () => {
   return (
     <>
       <Header />
@@ -13,4 +13,4 @@ const Listings = () => {
   );
 };
 
-export default Listings;
+export default Booking;

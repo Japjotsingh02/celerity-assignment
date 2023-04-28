@@ -4,7 +4,8 @@ import Services from "../components/Services";
 import SearchBar from "../components/SearchBar";
 import Footer from "../components/Footer";
 import HeadSection from "../components/HeadSection";
-const SearchForm = () => {
+
+const Homepage = () => {
   return (
     <>
       <Header />
@@ -16,4 +17,4 @@ const SearchForm = () => {
   );
 };
 
-export default SearchForm;
+export default Homepage;
