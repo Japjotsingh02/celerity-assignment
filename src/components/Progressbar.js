@@ -2,7 +2,7 @@ import React from "react";
 
 const Progressbar = () => {
   return (
-    <div className="flex flex-col justify-center items-center my-24">
+    <div className="flex flex-col justify-center items-center mt-24 mb-16">
       <div className="flex w-fit justify-center items-center text-white">
         <span className="bg-[#D3B0FF] rounded-full px-4 py-2">1</span>
         <span className="bg-[#D3B0FF] w-20 h-0.5 m-1"></span>
