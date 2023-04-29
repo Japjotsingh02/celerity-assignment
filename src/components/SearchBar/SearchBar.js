@@ -5,8 +5,9 @@ import { Wrapper } from "./SearchBar.styled";
 import ship from '../../assets/ship.svg';
 import location from '../../assets/location.svg';
 import calendar from '../../assets/calendar.svg';
+import edit from '../../assets/edit2.svg';
 
-const SearchBar = () => {
+const SearchBar = ({data}) => {
   const navigate = useNavigate();
   const originRef=useRef("");
   const destinationRef=useRef("");
@@ -16,7 +17,7 @@ const SearchBar = () => {
   const handleSubmit=(e)=>{
     e.preventDefault();
 
-    navigate("/Booking",{
+    navigate("/Shipping",{
       state:{
         origin:originRef.current.value,
         destination:destinationRef.current.value,
@@ -35,6 +36,8 @@ const SearchBar = () => {
         className=" block w-full font-semibold text-black outline-none"
         placeholder="Origin, Port, City"
         required
+        readOnly={data}
+        value={data && data.origin}
       />
       <img src={location} alt="location-logo"/>
       <input
@@ -43,6 +46,8 @@ const SearchBar = () => {
         className=" block w-full font-semibold text-black outline-none border-r-2"
         placeholder="Destination, Port, City"
         required
+        readOnly={data}
+        value={data && data.destination}
       />
       <img src={calendar} alt="date-logo"/>
       <input
@@ -51,6 +56,9 @@ const SearchBar = () => {
         className=" block w-full font-semibold text-black outline-none border-r-2"
         placeholder="13 April 2023"
         required
+        readOnly={data}
+        value={data && data.date}
+
       />
       <img src={ship} alt="ship-logo"/>
       <input
@@ -59,13 +67,19 @@ const SearchBar = () => {
         className=" block w-full font-semibold text-black outline-none border-r-2"
         placeholder="Load"
         required
+        readOnly={data}
+        value={data && data.load}
       />
-      <button
-        type="submit"
-        className="bg-[#9747ff] rounded-lg text-white font-semibold p-2 mt-1 rounded"
-      >
-        <BsArrowRight />
-      </button>
+      {!data ?
+        <button
+          type="submit"
+          className="bg-[#9747ff] rounded-lg text-white font-semibold p-2 mt-1 rounded"
+        >
+          <BsArrowRight />
+        </button>
+        :
+        <img src={edit} alt='edit-icon'/>
+      }
     </Wrapper>
   );
 };
